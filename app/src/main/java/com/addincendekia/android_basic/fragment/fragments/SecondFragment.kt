@@ -7,12 +7,4 @@ import android.view.View
 import android.view.ViewGroup
 import com.addincendekia.android_basic.R
 
-class SecondFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false)
-    }
-}
+class SecondFragment : Fragment(R.layout.fragment_second) {}
