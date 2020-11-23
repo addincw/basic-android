@@ -13,6 +13,8 @@ import com.addincendekia.android_basic.databinding.ActivityViewModelBinding
  *
  * butuh implementasi berikut di build.gradle.app
  * implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+ *
+ * viewmodel factory untuk mengirim parameter ke viewmodel
  */
 class ViewModelActivity : AppCompatActivity() {
     lateinit var binding: ActivityViewModelBinding
@@ -32,11 +34,21 @@ class ViewModelActivity : AppCompatActivity() {
 //        }
 
 ////      view model
-        var viewModel = ViewModelProvider(this).get(ViewModelActivityVM::class.java)
+//        var viewModel = ViewModelProvider(this).get(ViewModelActivityVM::class.java)
+//        binding.tvCount.text = viewModel.number.toString()
+//
+//        binding.btnCount.setOnClickListener {
+//            viewModel.incrementNumber()
+//            binding.tvCount.text = viewModel.number.toString()
+//        }
+
+////        view model with parameter
+        val viewModelFactory = ViewModelActivityVMFactory(5)
+        var viewModel = ViewModelProvider(this, viewModelFactory).get(ViewModelActivityVM::class.java)
         binding.tvCount.text = viewModel.number.toString()
 
         binding.btnCount.setOnClickListener {
-            viewModel.incrementNumber()
+            viewModel.incrementNumberByMultiple()
             binding.tvCount.text = viewModel.number.toString()
         }
 
