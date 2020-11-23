@@ -21,6 +21,6 @@ class ViewBindingActivity : AppCompatActivity() {
         binding = ActivityViewBindingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvTitle
+        binding.tvActTitle
     }
 }
