@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidbasic">
+        <activity android:name=".bottomnavigation_w_fab.BottomNavigationWFabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".bottomnavigation_w_fab.MainActivity" />
         <activity android:name=".botomnavigation.BottomNavigationActivity" />
         <activity android:name=".livedata.LiveDataActivity">
             <intent-filter>
